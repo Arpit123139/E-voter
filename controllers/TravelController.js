@@ -24,7 +24,7 @@ exports.addTravel=(BigPromise(async (req,res)=>{
         from:"elecathonsend@gmail.com",
         to:email,
         subject:"Refund Request Recieved",
-        html:'<h1>Congratulations !! Your Refund Process Started </h1>'
+        html:'<h3>Congratulations !! Your Refund Process Started </h3>'
     }
 
     transporter.sendMail(mailOptions,(error,info)=>{

@@ -50,8 +50,9 @@ exports.addDocument=(BigPromise(async (req,res)=>{
     const mailOptions={
         from:"elecathonsend@gmail.com",
         to:email,
-        subject:"Refund Request Recieved",
-        html:`<h1>Congratulations !! Your Slot is Booked for ${map.get(params)} You can Track Your route to the polling booth from the below Link   localhost:3001/map </h1>`
+        subject:"Slot Booked Succesfully ",
+        html:`<h3>Congratulations !! Your Slot is Booked for ${map.get(params)} You can Track Your route to the polling booth from the below Link    </h3>
+        <a href="http://localhost:3001/map"> <h1>See Your Route<h1> <a>`
         
     }
 
