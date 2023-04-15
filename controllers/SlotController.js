@@ -1,5 +1,6 @@
 const Slot=require('../models/Slot')
 const BigPromise=require('../middleware/bigpromise');
+const Booth=require('../models/boothManager')
 const e = require('express');
 
 exports.getSlot=(BigPromise(async(req,res)=>{
@@ -7,6 +8,7 @@ exports.getSlot=(BigPromise(async(req,res)=>{
     const area=req.params.areaName;
     console.log("Area "+area);
 
+   
     if(!area){
         return res.status(200).json({
             message:"Plz Provide The Area "
@@ -22,8 +24,16 @@ exports.getSlot=(BigPromise(async(req,res)=>{
 
 exports.alotSlot=(BigPromise(async(req,res)=>{
 
-    const {areaName,id}=req.params;
+    const {areaName,id,voterId}=req.params;
     console.log(req.params)
+
+    const document=await Booth.findOne({voterId:voterId})
+    console.log(document)
+    if(!document){
+        return res.status(401).json({
+            success:"User Not Verified "
+        })
+    }
 
     const slot=await Slot.find({area:areaName})
 
