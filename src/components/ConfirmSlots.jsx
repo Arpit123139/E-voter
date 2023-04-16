@@ -14,11 +14,12 @@ const ConfirmSlots = () => {
     console.log(areaName);
     console.log(id);
 
+    const voterId = localStorage.getItem('voterId');
     
 
   return (
     <>
-        <DocumentUpload areaName={areaName} id={id}/>
+        <DocumentUpload areaName={areaName} id={id} voterId = {voterId} />
         
     </>
   )

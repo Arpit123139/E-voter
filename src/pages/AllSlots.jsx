@@ -6,6 +6,7 @@ import { useAlert } from 'react-alert';
 import SlotBookingCard from '../components/SlotBookingCard';
 import logo from './images/logo.png';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 import '../components/slot-booking-card.css';
 
@@ -30,10 +31,10 @@ const AllSlots = () => {
 
 
   return (
-    <>
+    <div>
+      <Navbar />
+       <section className='booking-hero'>
         
-        <section className='booking-hero'>
-        <Link to='/'><img className='logo-image' src={logo} alt="" /></Link>
           <div className='booking-card-grid'>
           {timeslot &&
                 timeslot?.map((item,i)=>(
@@ -47,9 +48,7 @@ const AllSlots = () => {
           </div>
         </section>
        
-                
-       
-    </>
+    </div>
   )
 }
 

@@ -2,7 +2,7 @@ import { Component } from "react";
 import slot1 from "../assets/first.jpg"
 import slot2 from "../assets/second.jpg"
 import slot3 from "../assets/third.jpg"
-import slot4 from "../assets/fourth.jpg"
+import slot4 from "../assets/fourth.jpeg"
 import "./feature.css";
 
 class Featuredata extends Component{

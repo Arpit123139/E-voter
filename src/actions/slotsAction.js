@@ -6,13 +6,13 @@ import { UPDATE_SLOT_FAIL,
 } from "../constants/slotsConstant";
 import axios from "axios";
 
-export const updateSlotDetails = (areaName, id) => async (dispatch) => {
+export const updateSlotDetails = (areaName, id, voterId) => async (dispatch) => {
     try {
         dispatch({type: UPDATE_SLOT_REQUEST});
 
         const config = { headers: {"Content-Type" : "application/json"}};
 
-        const {data} = await axios.put(`/api/slot/alotSlot/${areaName}/${id}`, config);
+        const {data} = await axios.put(`/api/slot/alotSlot/${areaName}/${id}/${voterId}`, config);
 
         dispatch({type: UPDATE_SLOT_SUCCESS, payload: data.success});
         

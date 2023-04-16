@@ -6,9 +6,13 @@ import step3 from "../assets/3.jpg"
 import step4 from "../assets/4.jpg"
 import step5 from "../assets/5.jpg"
 import step6 from "../assets/6.jpg"
+import Navbar from "./Navbar";
+
 function Guide(){
     return (
-        <div className="guide">
+        <div>
+            <Navbar />
+            <div className="guide">
             <h1>GUIDELINES</h1>
         <div className="guidecard">
             <Guidedata
@@ -46,6 +50,8 @@ function Guide(){
             />
         </div>
         </div>
+        </div>
+        
 
 
     );

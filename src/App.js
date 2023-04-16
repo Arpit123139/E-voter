@@ -13,6 +13,7 @@ import CreatePost from './components/CreatePost';
 
 import GoogleMaps from './components/GoogleMaps';
 import Guide from './components/Guide';
+import Verify from './components/Verify';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path='/home/:token' element ={<CommunityHome/>}/>
         <Route path='/CreatePost/:token' element ={<CreatePost/>}/>
         <Route path='/guidelines' element={<Guide />} />
+        <Route path='/isverify' element={<Verify />} />
+        
       </Routes>
     </BrowserRouter>
 

@@ -23,6 +23,7 @@ const SlotBookingCard = ({areaName, id, availability}) => {
    
         
     <div className='booking-card' onClick={()=>clickhandle()}>
+     
       <div className='booking-content'>
         <h1 className='booking-category'>{`Slot No = ${id+1}`}</h1>
         <h2 className='booking-heading'>{`Slot Time = ${hour[id]}-${hour[id+1]}`}</h2>

@@ -1,33 +1,28 @@
 import first from "../assets/first.jpg";
 import second from "../assets/second.jpg";
 import third from "../assets/third.jpg";
-import fourth from "../assets/fourth.jpg";
+import fourth from "../assets/fourth.jpeg";
 import fifth from "../assets/fifth.jpg";
 
 export default [
   {
-    title: "First Slide",
-    description: "This is the first slider Image of our carousel",
+    description: "If you don’t Vote you lose the right to complain",
     urls: first,
   },
   {
-    title: "Second Slide",
-    description: "This is the second slider Image of our carousel",
+    description: "Feel proud to be a Voter. Be ready to Vote",
     urls: second,
   },
   {
-    title: "Third Slide",
-    description: "This is the Third slider Image of our carousel",
+    description: "One push of a button can change the entire nation.",
     urls: third,
   },
   {
-    title: "Fourth Slide",
-    description: "This is the Fourth slider Image of our carousel",
+    description: "Voting gives you the power to choose your own leader.",
     urls: fourth,
   },
   {
-    title: "Fifth Slide",
-    description: "This is the Fifth slider Image of our carousel",
+    description: "Only a voter has the power to bring up or bring down a power",
     urls: fifth,
   },
 ];

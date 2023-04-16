@@ -11,40 +11,40 @@ const Footer = () => {
            <p>Make your voting experience easy.</p>
         </div>
         <div>
-          <a href="/">
+          <a href="https://www.facebook.com/ECI">
             <i className="fa-brands fa-facebook-square"></i>
           </a>
-          <a href="/">
+          <a href="https://www.instagram.com/ecisveep/">
             <i className="fa-brands fa-instagram-square"></i>
           </a>
-          <a href="/">
-            <i className="fa-brands fa-behance-square"></i>
+          <a href="https://www.linkedin.com/company/eci-india/">
+            <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href="/">
+          <a href="https://twitter.com/ECISVEEP">
             <i className="fa-brands fa-twitter-square"></i>
           </a>
         </div>
         </div>
         <div className="bottom">
           <div>
-            <h4>Project</h4>
-            <a href="/">Changelog</a>
-            <a href="/">Status</a>
-            <a href="/">License</a>
-            <a href="/">Allversions</a>
+            <h4>Quick Links</h4>
+            <a href="https://www.nvsp.in/">Apply for Voter Card</a>
+            <a href="https://eci-citizenservices.eci.nic.in/">Public Grievance</a>
+            <a href="https://rti.eci.nic.in/">RTI Online</a>
+            <a href="https://play.google.com/store/apps/details?id=in.nic.eci.cvigil&hl=en_US">Download cVIGIL</a>
           </div>
           <div>
-            <h4>Community</h4>
-            <a href="/">GitHub</a>
-            <a href="/">Issues</a>
-            <a href="/">Project</a>
-            <a href="/">Twiiter</a>
+            <h4>Media and Publications</h4>
+            <a href="https://eci.gov.in/files/category/10-current-issues/">Current Issues</a>
+            <a href="https://eci.gov.in/files/category/11-press-releases/">Press Releases</a>
+            <a href="https://eci.gov.in/statistical-report/statistical-reports/">Statistical Report</a>
+            <a href="https://eci.gov.in/files/category/4-manuals/" >Manuals</a>
           </div>
           <div>
             <h4>Help</h4>
-            <a href="/">Support</a>
-            <a href="/">Troubleshooting</a>
-            <a href="/">Contact Us</a>
+            <a href="https://eci.gov.in/website-policy/terms-conditions-r2/">Terms and Conditions</a>
+            <a href="https://eci.gov.in/important-instructions/">Important Instructions</a>
+            <a href="https://eci.gov.in/contact-us/contact-us/">Contact Us</a>
           </div>
           <div>
             <h4>Others</h4>

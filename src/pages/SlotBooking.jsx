@@ -5,7 +5,8 @@ import { getSlotDetails } from '../actions/slotBookingAction';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import SlotCard from '../components/SlotCard';
 import './slot-card.css';
-import logo from './images/logo.png';
+import Navbar from '../components/Navbar';
+import { getAllSlots } from '../actions/allSlotsAction';
 
 
 const SlotBooking = () => {
@@ -17,14 +18,18 @@ const SlotBooking = () => {
 
     const { loading, error, area } = useSelector((state) => state.slot);
 
-    const [pincode, setPincode] = useState("");
+    const [name, setName] = useState("");
+    const [areaName, setAreaName] = useState("");
+    const [voterId, setVoterId] = useState("");
 
     
 
 
-    const pincodeSubmit = (e)=>{
-        e.preventDefault();
-        dispatch(getSlotDetails(pincode));
+    const detailsSubmit = ()=>{
+        
+        console.log(voterId);
+        localStorage.setItem('voterId',voterId);
+        dispatch(getAllSlots(areaName));
     }
 
     console.log(area);
@@ -33,23 +38,44 @@ const SlotBooking = () => {
 
 
   return (
-   <div className='slot-container'>
+   <div>
+    <Navbar />
+    <div className='slot-container'>
         <div className='enter-pincode'>
-            <Link to='/'><img src={logo} alt="" /></Link>
+           
                 <div  className='pincode-form'>
-                <form action="#" onSubmit={pincodeSubmit}>
-                    <h1>Enter pincode</h1>
+                <form action="#" >
+                    <h1>Enter your Details</h1>
                     <input 
                         className='input-pincode'
                         type="text" 
-                        name='pincode' 
-                        placeholder='Enter Pincode' 
+                        name='name' 
+                        placeholder='Enter Your Name' 
                         required 
-                        value={pincode}
-                        onChange={(e)=>setPincode(e.target.value)}
+                        value={name}
+                        onChange={(e)=>setName(e.target.value)}
+                        />
+                    <input 
+                        className='input-pincode'
+                        type="text" 
+                        name='area' 
+                        placeholder='Enter Your Area' 
+                        required 
+                        value={areaName}
+                        onChange={(e)=>setAreaName(e.target.value)}
                         />
                     
-                    <button>Enter pincode</button>
+                    <input 
+                        className='input-pincode'
+                        type="text" 
+                        name='voterId' 
+                        placeholder='Enter Your Voter Id Number' 
+                        required 
+                        value={voterId}
+                        onChange={(e)=>setVoterId(e.target.value)}
+                        />
+                    
+                    <Link to={`/slot/${areaName}`}><button onClick={()=>detailsSubmit()}>Submit</button></Link>
                 </form>
                 </div>
     </div>
@@ -65,6 +91,7 @@ const SlotBooking = () => {
         </div>
     </section>
     </div>
+   </div>
   )
 }
 
