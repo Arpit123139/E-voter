@@ -128,13 +128,13 @@ return (
     <div>
     <Navbar />
       <div className='comm-card-background-image'>
-      <Video autoPlay loop className="video-play">
+      {/* <Video autoPlay loop className="video-play">
            <source src={introVideo1} type="video/webm" />
        </Video><Video autoPlay loop className="video-play">
                <source src={introVideo2} type="video/webm" />
            </Video><Video autoPlay loop className="video-play">
                <source src={introVideo3} type="video/webm" />
-           </Video>
+           </Video> */}
 <div className="comm-home">
     {data.map((posts)=>{
         return (

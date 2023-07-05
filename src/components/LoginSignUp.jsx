@@ -24,10 +24,8 @@ const LoginSignUp = () => {
 
    
 
-    localStorage.setItem('token',userToken);
-    localStorage.setItem('user', user1?._id);
-    localStorage.setItem('userName',user1?.name);
-    localStorage.setItem('userImage',user1?.url)
+    // localStorage.setItem('token',userToken);
+
 
 
 

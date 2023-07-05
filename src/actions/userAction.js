@@ -24,7 +24,10 @@ export const login = (email, password) => async (dispatch) => {
             {email, password},
             config
         );
-
+        localStorage.setItem('token',data.token);
+        localStorage.setItem('user', data.user?._id);
+        localStorage.setItem('userName',data.user?.name);
+        localStorage.setItem('userImage',data.user?.url)
         dispatch({type: LOGIN_SUCCESS, payload: data.user});
         
     } catch (error) {
@@ -60,6 +63,10 @@ export const token =  (email, password) => async (dispatch) => {
             config
         );
 
+        localStorage.setItem('token',data.token);
+        localStorage.setItem('user', data.user?._id);
+        localStorage.setItem('userName',data.user?.name);
+        localStorage.setItem('userImage',data.user?.url)
         dispatch({type: TOKEN_USER_SUCCESS, payload: data.token});
         
     } catch (error) {
