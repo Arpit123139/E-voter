@@ -28,13 +28,13 @@ exports.alotSlot=(BigPromise(async(req,res)=>{
     console.log(req.params)
     const params=req.params.id
 
-    const document=await Booth.findOne({voterId:voterId})
-    console.log("Documetnt"+ document)
-    if(!document){
-        return res.status(200).json({
-            success:"User Not Verified "
-        })
-    }
+    // const document=await Booth.findOne({voterId:voterId})
+    // console.log("Documetnt"+ document)
+    // if(!document){
+    //     return res.status(200).json({
+    //         success:"User Not Verified "
+    //     })
+    // }
 
     const map=new Map();
     map.set('0','7 - 7:30')
